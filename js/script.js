@@ -79,3 +79,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
     });
   });
+
+  function toggleMenu() {
+    document.getElementById("sideNav").classList.toggle("active");
+  }

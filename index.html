@@ -31,23 +31,27 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="header">
-        <div class="container">
-            <a href="#" class="logo">SIVA RAJA</a>
-            <ul class="nav-links" id="myNavMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#academic">Academic Profile</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+<!-- Navigation -->
+<nav class="navbar" id="header">
+    <div class="container">
+      <a href="#" class="logo">SIVA RAJA</a>
+  
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <ul class="nav-links" id="sideNav">
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#about-me" onclick="toggleMenu()">About Me</a></li>
+        <li><a href="#academic" onclick="toggleMenu()">Academic Profile</a></li>
+        <li><a href="#research" onclick="toggleMenu()">Research</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
 
     <!-- Hero Section -->
     <section id="home" class="hero">
