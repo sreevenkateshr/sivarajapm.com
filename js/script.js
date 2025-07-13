@@ -1,81 +1,81 @@
-// Scroll-aware navbar
-window.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".navbar");
-  navbar.classList.toggle("scrolled", window.scrollY > 50);
-});
+// Navigation toggle
+function toggleMenu() {
+  const menu = document.getElementById("myNavMenu");
+  menu.classList.toggle("responsive");
+}
 
-// Typed.js animation
-document.addEventListener("DOMContentLoaded", function () {
-  new Typed("#typed-roles", {
-    strings: ["Professor", "Researcher", "Innovator"],
-    typeSpeed: 50,
-    backSpeed: 30,
-    backDelay: 1500,
-    loop: true,
-  });
+// Navbar shadow on scroll
+window.onscroll = function () {
+  const header = document.getElementById("header");
+  if (window.scrollY > 50) {
+    header.style.boxShadow = "0 2px 6px rgba(0, 0, 0, 0.1)";
+  } else {
+    header.style.boxShadow = "none";
+  }
+};
 
-  // AOS Init
-  AOS.init({
-    duration: 1000,
-    easing: "ease-in-out",
-    once: true,
-  });
-
-  // Mobile nav icon toggle
-  const menuToggle = document.getElementById("menu-toggle");
-  const icon = menuToggle.querySelector("i");
-  const navbarNav = document.getElementById("navbarNav");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  menuToggle.addEventListener("click", () => {
-    icon.classList.toggle("fa-bars");
-    icon.classList.toggle("fa-times");
-  });
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      icon.classList.add("fa-bars");
-      icon.classList.remove("fa-times");
-      navbarNav.classList.remove("show");
+// Typing effect
+window.addEventListener("DOMContentLoaded", function () {
+  const typedElement = document.querySelector(".typedText");
+  if (typedElement) {
+    // Wrap in a span to keep the cursor inline
+    typedElement.innerHTML = '<span id="typed"></span>';
+    new Typed("#typed", {
+      strings: ["Assistant Professor", "Researcher", "Head of the Department"],
+      loop: true,
+      typeSpeed: 70,
+      backSpeed: 40,
+      backDelay: 2000,
+      showCursor: true,
+      cursorChar: "|"
     });
-  });
-
-  document.addEventListener("click", function (e) {
-    if (!menuToggle.contains(e.target) && !navbarNav.contains(e.target)) {
-      navbarNav.classList.remove("show");
-      icon.classList.remove("fa-times");
-      icon.classList.add("fa-bars");
-    }
-  });
-
-  // Scroll to top with progress
-  const scrollToTopButton = document.getElementById("scrollToTopBtn");
-  const progressCircle = document.getElementById("progress");
-  const circleLength = 125;
-  const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-
-  window.addEventListener("scroll", () => {
-    const scrollPercent = window.scrollY / totalScrollHeight;
-    const strokeOffset = circleLength * (1 - scrollPercent);
-    progressCircle.style.strokeDashoffset = strokeOffset;
-    scrollToTopButton.style.opacity = window.scrollY > 100 ? 1 : 0;
-  });
-
-  scrollToTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  // Mobile image animation
-  const img = document.querySelector(".animate-on-mobile");
-  const isMobile = window.innerWidth <= 767;
-  if (isMobile && img) {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) img.classList.add("active");
-    }, { threshold: 0.3 });
-    observer.observe(img);
   }
 
-  // Disable right-click
-  document.addEventListener("contextmenu", e => e.preventDefault());
+  // ScrollReveal animations
+  if (typeof ScrollReveal !== "undefined") {
+    ScrollReveal().reveal('.hero-content', { delay: 200, distance: '50px' });
+    ScrollReveal().reveal('.about-text', { delay: 200, origin: 'right', distance: '60px' });
+    ScrollReveal().reveal('.about-img', { delay: 200, origin: 'left', distance: '60px' });
+    ScrollReveal().reveal('.research-card', { interval: 200 });
+    ScrollReveal().reveal('.contact-info', { delay: 200, origin: 'bottom' });
+  }
 });
 
+ScrollReveal().reveal('.about-img', {
+  origin: 'left',
+  distance: '60px',
+  duration: 1000,
+  delay: 200
+});
+
+ScrollReveal().reveal('.about-text', {
+  origin: 'right',
+  distance: '60px',
+  duration: 1000,
+  delay: 400
+});
+
+document.querySelector('#contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  e.target.reset();
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });

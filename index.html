@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Siva Raja P M | Professor & Researcher</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pH+YILSU5MaYAM6v7rxFzHZWWRmjFqlhXELD7y+ThVRzRvoYX6Ozj8K0Z8r4eT3L5MymrsK6Rz5H6uZbFqBiCg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- ✅ Working LineIcons v3 -->
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <script>
         (function () {
             emailjs.init("BM3lIHHgvWmFOFpaQ");
@@ -20,17 +31,17 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="header">
         <div class="container">
             <a href="#" class="logo">SIVA RAJA</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="myNavMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about-me">About Me</a></li>
-                <li><a href="#academic-profile">Academic Profile</a></li>
+                <li><a href="#academic">Academic Profile</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -40,10 +51,10 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">Dr. <span>Siva Raja P M</span></h1>
-                <h2 class="hero-subtitle">Professor & Researcher in Computer Science</h2>
+                <h2 class="hero-subtitle typedText"></h2>
                 <p class="hero-description">Specializing in Medical Image Processing, Deep Learning, and Blockchain
                     Applications in Healthcare</p>
                 <div class="hero-buttons">
@@ -53,148 +64,190 @@
             </div>
             <div class="hero-image">
                 <div class="image-wrapper">
-                    <img src="Siva Raja P.M.jpeg" alt="Dr. Siva Raja P M">
+                    <img src="Siva Raja P.M.jpeg" alt="Dr. Siva Raja P M" />
                 </div>
             </div>
         </div>
     </section>
-    <!-- About Us Section -->
-    <section id="about" class="about-me">
-        <div class="container">
 
-            <!-- Heading -->
-            <h2 class="about-heading">About <span>Us</span></h2>
+    <!-- about us  -->
 
-            <div class="about-flex">
-                <!-- Left: Profile Image -->
-                <div class="about-image">
-                    <div class="profile-image-wrapper">
-                        <img src="Siva Raja P.M.jpeg" alt="Dr. Siva Raja P M" class="profile-image" />
-                        <div class="image-overlay"></div>
-                    </div>
-                </div>
-
-                <!-- Right: Summary + CV -->
-                <div class="about-content">
-                    <p class="about-summary">
-                        Dr. Siva Raja P. M. is a seasoned academic and researcher with over 15 years of expertise in
-                        Artificial Intelligence and Healthcare Innovation. Passionate about mentoring and impactful
-                        research, he continues to bridge technology with real-world applications in medical and academic
-                        fields.
-                    </p>
-                    <div class="cv-download-container">
-                        <a href="Siva_Raja_PM_CV.docx" class="btn-cv" download>
-                            <i class="fas fa-file-word"></i> Download CV
-                        </a>
-                    </div>
-                </div>
+    <section id="about-me" class="about-section">
+        <div class="container about-container">
+            <div class="about-img">
+                <img src="Siva Raja P.M.jpeg" alt="Dr. Siva Raja P M" />
             </div>
-
+            <div class="about-text">
+                <h2>About <span>Me</span></h2>
+                <p>
+                    Dr. Siva Raja P. M. is a dedicated academic and researcher with over 15 years of experience in
+                    Computer Science. His research spans medical image processing, deep learning, and blockchain
+                    technology. As Head of the Department, he combines academic leadership with technological innovation
+                    to inspire students and peers.
+                </p>
+                <a href="Siva_Raja_PM_CV.docx" class="btn btn-primary" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
         </div>
     </section>
+
+
     <!-- About Section -->
-    <section id="academic-profile" class="academic-profile">
-        <div class="container">
-            <h2 class="section-title">Academic <span>Profile</span></h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="Siva Raja P.M(2).jpg" alt="Dr. Siva Raja P M">
-                </div>
-                <div class="about-text">
-                    <h3>Professional Summary</h3>
-                    <p>Professor in Computer Science and Engineering with extensive experience in academia and research.
-                        Recognized for contributions in medical image processing, deep learning, and blockchain
-                        applications in healthcare.</p>
+   <section id="academic">
+    <h2 class="acad">Academic Profile</h2>
+    <div class="summary">
+        <p><strong>Professional Summary:</strong> Professor in Computer Science and Engineering with extensive
+            experience in academia and research. Recognized for contributions in medical image processing, deep
+            learning, and blockchain applications in healthcare.</p>
+    </div>
 
-                    <div class="education">
-                        <h3>Education</h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <h4>Ph.D. in Computer Science and Engineering</h4>
-                                <p>Sathyabhama Institute of Science and Technology, Chennai • 2018</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h4>M.Tech in Computer Science and Engineering</h4>
-                                <p>Manonmanium Sundarnar University • 2009 • First Class with 76%</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h4>B.Tech in Information Technology</h4>
-                                <p>Sun College of Engineering and Technology • 2005 • First Class with 70%</p>
-                            </div>
-                        </div>
-                    </div>
+    <div class="timeline">
 
-                    <div class="experience">
-                        <h3>Professional Experience</h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <h4>Professor</h4>
-                                <p>Amrita College of Engineering & Technology • Sep 2023 - Present</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h4>Associate Professor</h4>
-                                <p>Amrita College of Engineering & Technology • Mar 2022 - Aug 2023</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h4>Assistant Professor</h4>
-                                <p>Amrita College of Engineering & Technology • Jun 2018 - Feb 2022</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h4>Assistant Professor & HoD</h4>
-                                <p>Sun College of Engineering & Technology • Jun 2009 - May 2018</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Ph.D -->
+        <div class="timeline__event timeline__event--type2">
+            <div class="timeline__event__icon">
+                <i class="lni-graduation"></i>
+            </div>
+            <div class="timeline__event__date">2018</div>
+            <div class="timeline__event__content">
+                <div class="timeline__event__title">Ph.D. in CSE</div>
+                <div class="timeline__event__description">
+                    <p>Sathyabhama Institute of Science and Technology, Chennai</p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- M.Tech -->
+        <div class="timeline__event timeline__event--type2">
+            <div class="timeline__event__icon">
+                <i class="lni-graduation"></i>
+            </div>
+            <div class="timeline__event__date">2009</div>
+            <div class="timeline__event__content">
+                <div class="timeline__event__title">M.Tech in CSE</div>
+                <div class="timeline__event__description">
+                    <p>Manonmanium Sundarnar University – First Class with 76%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- B.Tech -->
+        <div class="timeline__event timeline__event--type2">
+            <div class="timeline__event__icon">
+                <i class="lni-graduation"></i>
+            </div>
+            <div class="timeline__event__date">2005</div>
+            <div class="timeline__event__content">
+                <div class="timeline__event__title">B.Tech in IT</div>
+                <div class="timeline__event__description">
+                    <p>Sun College of Engineering and Technology – First Class with 70%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professor -->
+        <div class="timeline__event timeline__event--type3">
+            <div class="timeline__event__icon">
+                <i class="lni-briefcase"></i>
+            </div>
+            <div class="timeline__event__date">Sep 2023 – Present</div>
+            <div class="timeline__event__content">
+                <div class="timeline__event__title">Professor</div>
+                <div class="timeline__event__description">
+                    <p>Amrita College of Engineering & Technology</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Associate Professor -->
+        <div class="timeline__event timeline__event--type3">
+            <div class="timeline__event__icon">
+                <i class="lni-briefcase"></i>
+            </div>
+            <div class="timeline__event__date">Mar 2022 – Aug 2023</div>
+            <div class="timeline__event__content">
+                <div class="timeline__event__title">Associate Professor</div>
+                <div class="timeline__event__description">
+                    <p>Amrita College of Engineering & Technology</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assistant Professor -->
+        <div class="timeline__event timeline__event--type3">
+            <div class="timeline__event__icon">
+                <i class="lni-briefcase"></i>
+            </div>
+            <div class="timeline__event__date">Jun 2018 – Feb 2022</div>
+            <div class="timeline__event__content">
+                <div class="timeline__event__title">Assistant Professor</div>
+                <div class="timeline__event__description">
+                    <p>Amrita College of Engineering & Technology</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assistant Professor & HoD -->
+        <div class="timeline__event timeline__event--type3">
+            <div class="timeline__event__icon">
+                <i class="lni-briefcase"></i>
+            </div>
+            <div class="timeline__event__date">Jun 2009 – May 2018</div>
+            <div class="timeline__event__content">
+                <div class="timeline__event__title">Asst. Prof & HoD</div>
+                <div class="timeline__event__description">
+                    <p>Sun College of Engineering & Technology</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- Research Section -->
-    <section id="research" class="research">
-        <div class="container">
-            <h2 class="section-title">Research <span>Focus</span></h2>
-            <p class="section-subtitle">Key areas of research expertise and contributions</p>
+     <section id="research">
+    <h2 style="text-align:center;">Research Focus</h2>
+    <p style="text-align:center; max-width:800px; margin:0 auto 2rem;">
+        Key areas of research expertise and contributions
+    </p>
 
-            <div class="research-grid">
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Medical Image Processing</h3>
-                    <p>Advanced techniques for brain tumor detection and classification using hybrid deep learning
-                        approaches.</p>
-                </div>
-
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Blockchain Security</h3>
-                    <p>Decentralized healthcare data exchange systems with novel encryption schemes and smart contracts.
-                    </p>
-                </div>
-
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Glaucoma Detection</h3>
-                    <p>Automated diagnosis systems using retinal fundus image analysis and deep learning algorithms.</p>
-                </div>
-
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Data Security</h3>
-                    <p>Innovative steganography and cryptography techniques for secure data transmission.</p>
-                </div>
+    <div class="research">
+        <div class="card" style="--grad: #6a11cb, #2575fc">
+            <div class="title">Medical Image Processing</div>
+            <div class="icon"><i class="fa-solid fa-x-ray"></i></div>
+            <div class="content">
+                <p>Advanced techniques for brain tumor detection and classification using hybrid deep learning
+                    approaches.</p>
             </div>
         </div>
-    </section>
 
+        <div class="card" style="--grad: #11998e, #38ef7d">
+            <div class="title">Blockchain Security</div>
+            <div class="icon"><i class="fa-solid fa-link"></i></div>
+            <div class="content">
+                <p>Decentralized healthcare data exchange systems with novel encryption schemes and smart contracts.</p>
+            </div>
+        </div>
+
+        <div class="card" style="--grad: #ee0979, #ff6a00">
+            <div class="title">Glaucoma Detection</div>
+            <div class="icon"><i class="fa-solid fa-eye"></i></div>
+            <div class="content">
+                <p>Automated diagnosis systems using retinal fundus image analysis and deep learning algorithms.</p>
+            </div>
+        </div>
+
+        <div class="card" style="--grad: #7F00FF, #E100FF">
+            <div class="title">Data Security</div>
+            <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="content">
+                <p>Innovative steganography and cryptography techniques for secure data transmission.</p>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Contact Section -->
+
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title"><span>Contact</span></h2>
@@ -223,62 +276,49 @@
                             <p>Amrita College of Engineering & Technology, Nagercoil, Tamil Nadu</p>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.scopus.com/authid/detail.uri?authorId=55904958700" target="_blank"
-                            title="Scopus"><i class="fas fa-book-open"></i></a>
-                        <a href="https://scholar.google.com/citations?user=OhvVj6UAAAAJ&hl=en" target="_blank"
-                            title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                        <a href="https://www.linkedin.com/in/siva-raja-p-m-36419225/" target="_blank"
-                            title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    </div>
                 </div>
 
                 <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="from_name" placeholder="Your Name" required>
+                    <div class="form-group"><input type="text" name="from_name" placeholder="Your Name" required></div>
+                    <div class="form-group"><input type="email" name="from_email" placeholder="Your Email" required>
                     </div>
-                    <div class="form-group">
-                        <input type="email" name="from_email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div class="form-group"><input type="text" name="subject" placeholder="Subject"></div>
+                    <div class="form-group"><textarea name="message" placeholder="Your Message" rows="5"
+                            required></textarea></div>
+                    <button type="submit" class="btn-submit">
+                        <i class="fab fa-telegram-plane"></i> Send Message
+                    </button>
                 </form>
+            </div>
+
+            <div class="social-bar">
+                <div class="social">
+                    <a class="fab fa-twitter fa-2x" href="https://twitter.com/akshaycodes" target="_blank"></a>
+                    <a class="fab fa-instagram fa-2x" href="https://instagram.com/akshaycodes" target="_blank"></a>
+                    <a class="fab fa-medium-m fa-2x" href="https://medium.com/@akshaycodes" target="_blank"></a>
+                    <a class="fab fa-codepen fa-2x" href="https://codepen.io/akshaycodes" target="_blank"></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- whatsapp -->
-     <!-- WhatsApp Floating Button -->
-<a
-href="https://wa.me/919442941587"  
-class="whatsapp-float"
-target="_blank"
-title="Chat on WhatsApp"
->
-<i class="fab fa-whatsapp"></i>
-</a>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2023 Dr. Siva Raja P M. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
-            </div>
-            <a href="#home" class="back-to-top">
-                <i class="fas fa-arrow-up"></i>
-              </a>
-              
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2023 Dr. Siva Raja P M. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
         </div>
-    </footer>
+    </div>
+    <a href="#home" class="back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</footer>
 
-    <script src="script.js"></script>
+
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
