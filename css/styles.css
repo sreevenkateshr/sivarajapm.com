@@ -642,65 +642,47 @@ body {
   }
 }
 
-/* footer */
+
+
+/* Footer */
 /* WhatsApp Floating Button */
 .whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25D366;
-  color: white;
-  font-size: 24px;
-  padding: 15px;
-  border-radius: 50%;
-  z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  transition: transform 0.3s ease;
+    position: fixed;
+    bottom: 20px; /* Adjusts the distance from the bottom */
+    left: 20px; /* Adjusts the distance from the left */
+    background-color: #25D366;
+    color: white;
+    padding: 16px;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* WhatsApp link styles */
+.whatsapp-float a {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+}
+
+/* WhatsApp icon styling */
+.whatsapp-float i {
+    font-size: 32px; /* Larger icon size for better visibility */
+    margin-right: 0; /* Remove the space since we're centering */
+}
+
+/* Hover effect to scale the icon */
 .whatsapp-float:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
-/* Footer */
-/* WhatsApp Floating Button - Left Side */
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  left: 25px;
-  background-color: #25D366;
-  color: white;
-  font-size: 24px;
-  padding: 15px;
-  border-radius: 50%;
-  z-index: 999;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-/* Footer */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background-color: #25d366;
-  color: white;
-  border-radius: 50%;
-  padding: 16px;
-  font-size: 24px;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
 
 /* Footer Styles */
 .footer {
@@ -728,20 +710,23 @@ body {
 
 /* Back to Top Arrow */
 .back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007bff;
-  color: white;
-  border-radius: 50%;
-  padding: 14px;
-  font-size: 20px;
-  text-align: center;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 14px;
+    font-size: 20px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .back-to-top:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
