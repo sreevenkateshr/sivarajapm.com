@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Siva Raja P M | Professor & Researcher</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -59,7 +59,6 @@
 </head>
 
 <body>
-    <!-- Navigation -->
     <!-- Navigation -->
     <nav class="navbar" id="header">
         <div class="container">
@@ -284,51 +283,84 @@
     </section>
 
     <!-- Contact Section -->
-
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title"><span>Contact</span></h2>
-            <p class="section-subtitle">For research collaborations, academic inquiries, or professional discussions</p>
+      <div class="container">
+        <h2 class="section-title"><span>Contact</span></h2>
+        <p class="section-subtitle">
+          For research collaborations, academic inquiries, or professional discussions
+        </p>
+    
+        <div class="contact-content">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>pm_sivaraja@nc.amrita.edu</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Phone</h3>
+                <p>+91 9442941587</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Institution</h3>
+                <p>Amrita College of Engineering & Technology, Nagercoil, Tamil Nadu</p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Contact Form -->
+          <form
+            class="contact-form"
+            action="https://formsubmit.co/selvamsivaraja@gmail.com"
+            method="POST"
+          >
+            <div class="form-group">
+              <input type="text" name="Name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="Email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <input type="text" name="Subject" placeholder="Subject" />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919442941587" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<!-- Scroll to Top Button -->
+<button onclick="scrollToTop()" class="scroll-top-btn" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
 
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>pm_sivaraja@nc.amrita.edu</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+91 9442941587</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Institution</h3>
-                            <p>Amrita College of Engineering & Technology, Nagercoil, Tamil Nadu</p>
-                        </div>
-                    </div>
-                </div>
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 
-                <form action="https://formsubmit.co/selvamsivaraja@gmail.com" method="POST">
-    <!-- Form Fields -->
-    <div class="form-group">
-        <input type="text" name="Name" placeholder="Your Name" required>
-    </div>
-    <div class="form-group">
-        <input type="email" name="Email" placeholder="Your Email" required>
-    </div>
-    <div class="form-group">
-        <input type="text" name="Subject" placeholder="Subject">
-    </div>
-    <div class="form-group">
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    </div>
 
     <!-- Hidden Fields -->
     <input type="hidden" name="_replyto" value="">

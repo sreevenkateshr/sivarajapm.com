@@ -1,131 +1,85 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    
-    hamburger.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navLinks.classList.toggle('active');
+// Navigation toggle
+function toggleMenu() {
+    const menu = document.getElementById("myNavMenu");
+    menu.classList.toggle("responsive");
+  }
+  
+  // Navbar shadow on scroll
+  window.onscroll = function () {
+    const header = document.getElementById("header");
+    if (window.scrollY > 50) {
+      header.style.boxShadow = "0 2px 6px rgba(0, 0, 0, 0.1)";
+    } else {
+      header.style.boxShadow = "none";
+    }
+  };
+  
+  // Typing effect
+  window.addEventListener("DOMContentLoaded", function () {
+    const typedElement = document.querySelector(".typedText");
+    if (typedElement) {
+      // Wrap in a span to keep the cursor inline
+      typedElement.innerHTML = '<span id="typed"></span>';
+      new Typed("#typed", {
+        strings: ["Assistant Professor", "Researcher", "Head of the Department"],
+        loop: true,
+        typeSpeed: 70,
+        backSpeed: 40,
+        backDelay: 2000,
+        showCursor: true,
+        cursorChar: "|"
+      });
+    }
+  
+    // ScrollReveal animations
+    if (typeof ScrollReveal !== "undefined") {
+      ScrollReveal().reveal('.hero-content', { delay: 200, distance: '50px' });
+      ScrollReveal().reveal('.about-text', { delay: 200, origin: 'right', distance: '60px' });
+      ScrollReveal().reveal('.about-img', { delay: 200, origin: 'left', distance: '60px' });
+      ScrollReveal().reveal('.research-card', { interval: 200 });
+      ScrollReveal().reveal('.contact-info', { delay: 200, origin: 'bottom' });
+    }
+  });
+  
+  ScrollReveal().reveal('.about-img', {
+    origin: 'left',
+    distance: '60px',
+    duration: 1000,
+    delay: 200
+  });
+  
+  ScrollReveal().reveal('.about-text', {
+    origin: 'right',
+    distance: '60px',
+    duration: 1000,
+    delay: 400
+  });
+  
+  document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.reset();
+  });
+  
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     });
-    
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-        });
-    });
-    
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-    
-    // Smooth scrolling for anchor links
+  });
+  
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-                
-                // Update URL without page jump
-                history.pushState(null, null, targetId);
-            }
-        });
-    });
-    
-    // Active nav link highlighting
-    function highlightNav() {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-links a');
-        
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - 100) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    }
-    
-    window.addEventListener('scroll', highlightNav);
-    window.addEventListener('load', highlightNav);
-    
-    // Back to top button
-    const backToTopBtn = document.querySelector('.back-to-top');
-    
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            backToTopBtn.style.opacity = '1';
-            backToTopBtn.style.visibility = 'visible';
-        } else {
-            backToTopBtn.style.opacity = '0';
-            backToTopBtn.style.visibility = 'hidden';
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
         }
+      });
     });
-    
-    // Scroll animations
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.fade-in');
-        
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (elementPosition < windowHeight - 100) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    };
-    
-    window.addEventListener('load', animateOnScroll);
-    window.addEventListener('scroll', animateOnScroll);
-
-    // EmailJS Contact Form Submission
-    const contactForm = document.getElementById('contact-form');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Optional: disable button and show sending feedback
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            submitButton.disabled = true;
-            submitButton.textContent = 'Sending...';
-
-            emailjs.sendForm('service_qhxgizw', 'template_afpf9ss', this)
-                .then(function() {
-                    alert('Message sent successfully!');
-                    contactForm.reset();
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Send Message';
-                }, function(error) {
-                    alert('Failed to send message.\nPlease try again later.');
-                    console.error('EmailJS Error:', error);
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Send Message';
-                });
-        });
+  
+    function toggleMenu() {
+      document.getElementById("sideNav").classList.toggle("active");
     }
-});
