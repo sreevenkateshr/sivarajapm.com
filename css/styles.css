@@ -20,7 +20,7 @@ body {
 /* Navbar */
 /* Navbar Base */
 .navbar {
-  background-color: #fff;
+  background: linear-gradient(to bottom, rgb(86, 85, 85), #757575);
   padding: 20px 0;
   position: sticky;
   top: 0;
@@ -80,7 +80,7 @@ body {
     align-items: center;
     gap: 2rem;
     transition: right 0.3s ease-in-out;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 0 10px rgba(233, 224, 224, 0.1);
   }
 
   .nav-links.active {
@@ -175,7 +175,7 @@ body {
 /* about section  */
 .about-section {
   padding: 80px 20px;
-  background-color: #f7f9fc;
+  background: linear-gradient(to middle, rgb(255, 255, 255), #456e9d);
 }
 
 .about-container {
@@ -730,3 +730,334 @@ body {
 .back-to-top:hover {
     transform: scale(1.1);
 }
+.footer {
+    background: #111;
+    color: #ccc;
+    padding: 2rem 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.footer a {
+    color: #ccc;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #007BFF;
+}
+.footer {
+  background: #1f1f1f;
+  color: #ccc;
+  font-family: 'Open Sans', sans-serif;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  gap: 2rem;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1 1 250px;
+}
+
+.footer-left h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.footer-left p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-right p {
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-right i {
+  color: #007bff;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    text-align: center;
+  }
+}
+.footer-bottom {
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.1rem; /* larger titles */
+  font-weight: 600;
+}
+
+.footer-nav a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #007bff;
+}
+
+.footer-links {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem; /* smaller for terms/privacy */
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: #777;
+}
+.footer-profile {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto 1rem auto;
+}
+
+.footer-profile h2 {
+  font-family: 'Merriweather', serif; /* Professional serif */
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 0.3rem;
+  color: #f5f5f5;
+}
+
+.footer-profile .designation {
+  font-family: 'Poppins', sans-serif; /* Clean sans-serif */
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.footer-profile .specializations {
+  list-style-type: disc;
+  list-style-position: inside;
+  font-family: 'Roboto Mono', monospace; /* Modern monospaced */
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #aaa;
+  padding-left: 1rem;
+  border-left: 2px dotted #444;
+}
+
+.footer-profile .specializations li {
+  margin-bottom: 0.2rem;
+}
+.footer-center {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.social-icons-list {
+    list-style: none; /* removes points */
+    display: flex;
+    justify-content: flex-end; /* aligns to right */
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons-list li a {
+    color: #ccc;
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons-list li a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+.footer-right {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.social-icons-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.8rem;
+}
+
+.social-icons-list li {
+    font-weight: 600;
+    color: #ddd;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-icons-list li i {
+    color: #007bff;
+    font-size: 1.1rem;
+}
+
+.social-icons-row {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.social-icons-row a {
+    color: #ccc;
+    font-size: 1.1rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons-row a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    max-width: 100%;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 0.3rem;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.footer-bottom a:hover {
+    color: #007bff;
+}
+
+.footer-bottom p {
+    color: #777;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+html {
+    scroll-behavior: smooth;
+}
+.contact {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto 2rem auto; 
+}
+
